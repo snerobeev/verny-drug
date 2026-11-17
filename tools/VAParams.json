@@ -1,0 +1,22 @@
+{
+    "featurepath": "/home/coder/verny-drug/features",
+    "ВыполнитьСценарии": true,
+    "ЗавершитьРаботуСистемы": true,
+    "ЗакрытьTestClientПослеЗапускаСценариев": true,
+    "ДелатьОтчетВФорматеАллюр": true,
+    "КаталогOutputAllureБазовый": "/home/coder/verny-drug/build/allure-results",
+    "ДелатьОтчетВФорматеjUnit": true,
+    "КаталогOutputjUnit": "/home/coder/verny-drug/build/junit",
+    "ДелатьЛогВыполненияСценариевВТекстовыйФайл": true,
+    "ИмяФайлаЛогВыполненияСценариев": "/home/coder/verny-drug/build/vanessa.log",
+    "ДанныеКлиентовТестирования": [
+        {
+            "Имя": "Этот клиент",
+            "ПутьКИнфобазе": "File=\"/srv/1c/bases/shelter-test\";",
+            "ДопПараметры": "/L ru",
+            "ТипКлиента": "Тонкий",
+            "ИмяКомпьютера": "localhost",
+            "ПортЗапускаТестКлиента": 48003
+        }
+    ]
+}
