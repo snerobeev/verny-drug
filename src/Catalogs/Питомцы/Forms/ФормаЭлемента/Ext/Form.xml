@@ -1,0 +1,330 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<CommandBarLocation>Bottom</CommandBarLocation>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ЗаписатьИЗакрыть" id="70">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<AutoMaxWidth>false</AutoMaxWidth>
+				<MaxWidth>10</MaxWidth>
+				<CommandName>Form.StandardCommand.WriteAndClose</CommandName>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Сохранить</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ЗаписатьИЗакрытьРасширеннаяПодсказка" id="71"/>
+			</Button>
+			<Button name="ФормаУстановитьПометкуУдаления" id="72">
+				<Type>CommandBarHyperlink</Type>
+				<CommandName>Form.StandardCommand.SetDeletionMark</CommandName>
+				<TextColor>style:SpecialTextColor</TextColor>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Переместить в архив</v8:content>
+					</v8:item>
+				</Title>
+				<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+				<ExtendedTooltip name="ФормаУстановитьПометкуУдаленияРасширеннаяПодсказка" id="73"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnReadAtServer">ПриЧтенииНаСервере</Event>
+		<Event name="BeforeWriteAtServer">ПередЗаписьюНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Код" id="1">
+			<DataPath>Объект.Code</DataPath>
+			<Visible>false</Visible>
+			<EditMode>EnterOnInput</EditMode>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="КодРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<PictureField name="ПутьКФото" id="31">
+			<DataPath>ПутьКФото</DataPath>
+			<TitleLocation>None</TitleLocation>
+			<Hyperlink>true</Hyperlink>
+			<ContextMenu name="ПутьКФотоКонтекстноеМеню" id="32"/>
+			<ExtendedTooltip name="ПутьКФотоРасширеннаяПодсказка" id="33"/>
+			<Events>
+				<Event name="Click">ПутьКФотоНажатие</Event>
+			</Events>
+		</PictureField>
+		<Pages name="ГруппаПанель" id="61">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа панель</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа панель</v8:content>
+				</v8:item>
+			</ToolTip>
+			<PagesRepresentation>TabsOnTop</PagesRepresentation>
+			<ExtendedTooltip name="ГруппаПанельРасширеннаяПодсказка" id="62"/>
+			<ChildItems>
+				<Page name="СтраницаОсновное" id="63">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Основное</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница основное</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтраницаОсновноеРасширеннаяПодсказка" id="64"/>
+					<ChildItems>
+						<InputField name="Наименование" id="4">
+							<DataPath>Объект.Description</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MaxWidth>20</MaxWidth>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
+							<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
+						</InputField>
+						<InputField name="ПородыЖивотных" id="58">
+							<DataPath>Объект.ПородыЖивотных</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Порода</v8:content>
+								</v8:item>
+							</Title>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MaxWidth>20</MaxWidth>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="ПородыЖивотныхКонтекстноеМеню" id="59"/>
+							<ExtendedTooltip name="ПородыЖивотныхРасширеннаяПодсказка" id="60"/>
+							<Events>
+								<Event name="OnChange">ПородыЖивотныхПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="ВидЖивотного" id="7">
+							<DataPath>Объект.ВидЖивотного</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MaxWidth>11</MaxWidth>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="ВидЖивотногоКонтекстноеМеню" id="8"/>
+							<ExtendedTooltip name="ВидЖивотногоРасширеннаяПодсказка" id="9"/>
+							<Events>
+								<Event name="OnChange">ВидЖивотногоПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="ПолЖивотного" id="10">
+							<DataPath>Объект.ПолЖивотного</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MaxWidth>11</MaxWidth>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="ПолЖивотногоКонтекстноеМеню" id="11"/>
+							<ExtendedTooltip name="ПолЖивотногоРасширеннаяПодсказка" id="12"/>
+						</InputField>
+						<InputField name="ДатаРождения" id="13">
+							<DataPath>Объект.ДатаРождения</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MaxWidth>9</MaxWidth>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="ДатаРожденияКонтекстноеМеню" id="14"/>
+							<ExtendedTooltip name="ДатаРожденияРасширеннаяПодсказка" id="15"/>
+						</InputField>
+						<InputField name="Цвет" id="34">
+							<DataPath>Объект.Цвет</DataPath>
+							<Width>10</Width>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MaxWidth>20</MaxWidth>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="ЦветКонтекстноеМеню" id="35"/>
+							<ExtendedTooltip name="ЦветРасширеннаяПодсказка" id="36"/>
+						</InputField>
+						<InputField name="Статус" id="49">
+							<DataPath>Объект.Статус</DataPath>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MaxWidth>20</MaxWidth>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="СтатусКонтекстноеМеню" id="50"/>
+							<ExtendedTooltip name="СтатусРасширеннаяПодсказка" id="51"/>
+						</InputField>
+						<InputField name="Приют" id="40">
+							<DataPath>Объект.Приют</DataPath>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="ПриютКонтекстноеМеню" id="41"/>
+							<ExtendedTooltip name="ПриютРасширеннаяПодсказка" id="42"/>
+						</InputField>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаДополнительно" id="65">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дополнительно</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница дополнительно</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтраницаДополнительноРасширеннаяПодсказка" id="66"/>
+					<ChildItems>
+						<InputField name="НомерВольера" id="46">
+							<DataPath>Объект.НомерВольера</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Вольер</v8:content>
+								</v8:item>
+							</Title>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MaxWidth>5</MaxWidth>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="НомерВольераКонтекстноеМеню" id="47"/>
+							<ExtendedTooltip name="НомерВольераРасширеннаяПодсказка" id="48"/>
+						</InputField>
+						<InputField name="Вес" id="67">
+							<DataPath>Объект.Вес</DataPath>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MaxWidth>5</MaxWidth>
+							<HorizontalStretch>true</HorizontalStretch>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="ВесКонтекстноеМеню" id="68"/>
+							<ExtendedTooltip name="ВесРасширеннаяПодсказка" id="69"/>
+							<Events>
+								<Event name="OnChange">ВесПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="СуточнаяНорма" id="74">
+							<DataPath>Объект.СуточнаяНорма</DataPath>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MaxWidth>5</MaxWidth>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="СуточнаяНормаКонтекстноеМеню" id="75"/>
+							<ExtendedTooltip name="СуточнаяНормаРасширеннаяПодсказка" id="76"/>
+						</InputField>
+						<InputField name="ЛюбимыйКорм" id="77">
+							<DataPath>Объект.ЛюбимыйКорм</DataPath>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MaxWidth>10</MaxWidth>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="ЛюбимыйКормКонтекстноеМеню" id="78"/>
+							<ExtendedTooltip name="ЛюбимыйКормРасширеннаяПодсказка" id="79"/>
+						</InputField>
+						<InputField name="ЧипНомер" id="16">
+							<DataPath>Объект.ЧипНомер</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Чип</v8:content>
+								</v8:item>
+							</Title>
+							<EditMode>EnterOnInput</EditMode>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MaxWidth>12</MaxWidth>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="ЧипНомерКонтекстноеМеню" id="17"/>
+							<ExtendedTooltip name="ЧипНомерРасширеннаяПодсказка" id="18"/>
+						</InputField>
+						<InputField name="НомерПаспорта" id="22">
+							<DataPath>Объект.НомерПаспорта</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Паспорт</v8:content>
+								</v8:item>
+							</Title>
+							<EditMode>EnterOnInput</EditMode>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MaxWidth>12</MaxWidth>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="НомерПаспортаКонтекстноеМеню" id="23"/>
+							<ExtendedTooltip name="НомерПаспортаРасширеннаяПодсказка" id="24"/>
+						</InputField>
+						<InputField name="ДатаПоступления" id="28">
+							<DataPath>Объект.ДатаПоступления</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MaxWidth>7</MaxWidth>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="ДатаПоступленияКонтекстноеМеню" id="29"/>
+							<ExtendedTooltip name="ДатаПоступленияРасширеннаяПодсказка" id="30"/>
+						</InputField>
+						<InputField name="ВетеринарныйОсмотр" id="43">
+							<DataPath>Объект.ВетеринарныйОсмотр</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Ветосмотр</v8:content>
+								</v8:item>
+							</Title>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MaxWidth>7</MaxWidth>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="ВетеринарныйОсмотрКонтекстноеМеню" id="44"/>
+							<ExtendedTooltip name="ВетеринарныйОсмотрРасширеннаяПодсказка" id="45"/>
+						</InputField>
+						<InputField name="ТекущееСостояние" id="52">
+							<DataPath>Объект.ТекущееСостояние</DataPath>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MaxWidth>12</MaxWidth>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="ТекущееСостояниеКонтекстноеМеню" id="53"/>
+							<ExtendedTooltip name="ТекущееСостояниеРасширеннаяПодсказка" id="54"/>
+						</InputField>
+						<InputField name="БывшийВладелец" id="25">
+							<DataPath>Объект.БывшийВладелец</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MaxWidth>12</MaxWidth>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="БывшийВладелецКонтекстноеМеню" id="26"/>
+							<ExtendedTooltip name="БывшийВладелецРасширеннаяПодсказка" id="27"/>
+						</InputField>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.Питомцы</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ПутьКФото" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Путь к фото</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+</Form>

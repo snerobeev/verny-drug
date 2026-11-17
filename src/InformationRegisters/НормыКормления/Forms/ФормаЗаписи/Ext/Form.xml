@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<InputField name="ВидЖивотного" id="1">
+			<DataPath>Запись.ВидЖивотного</DataPath>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<MaxWidth>10</MaxWidth>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="ВидЖивотногоКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ВидЖивотногоРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="Размер" id="4">
+			<DataPath>Запись.Размер</DataPath>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<MaxWidth>10</MaxWidth>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="РазмерКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="РазмерРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<InputField name="ВесОт" id="7">
+			<DataPath>Запись.ВесОт</DataPath>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="ВесОтКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ВесОтРасширеннаяПодсказка" id="9"/>
+		</InputField>
+		<InputField name="ВесДо" id="10">
+			<DataPath>Запись.ВесДо</DataPath>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="ВесДоКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="ВесДоРасширеннаяПодсказка" id="12"/>
+		</InputField>
+		<InputField name="КоличествоКорма" id="13">
+			<DataPath>Запись.КоличествоКорма</DataPath>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="КоличествоКормаКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="КоличествоКормаРасширеннаяПодсказка" id="15"/>
+		</InputField>
+		<InputField name="ТипКорма" id="16">
+			<DataPath>Запись.ТипКорма</DataPath>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<MaxWidth>10</MaxWidth>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="ТипКормаКонтекстноеМеню" id="17"/>
+			<ExtendedTooltip name="ТипКормаРасширеннаяПодсказка" id="18"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Запись" id="1">
+			<Type>
+				<v8:Type>cfg:InformationRegisterRecordManager.НормыКормления</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

@@ -1,0 +1,31 @@
+# Базы 1С и выгрузки: в репозиторий не кладём
+*.1CD
+*.1CL
+*.cfl
+*.dt
+*.cf
+*.cfe
+*.epf.bak
+
+# Служебные папки файловой базы
+1Cv8Log/
+1Cv8FTxt/
+1Cv8JobScheduler/
+
+# Результаты тестов и сборки
+build/
+out/
+allure-results/
+allure-report/
+api-tests/.gradle/
+api-tests/build/
+
+# Секреты
+*.env
+secrets/
+
+# Редакторы и система
+.vscode/
+.idea/
+Thumbs.db
+desktop.ini
