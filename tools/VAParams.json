@@ -3,8 +3,6 @@
     "ВыполнитьСценарии": true,
     "ЗавершитьРаботуСистемы": true,
     "ЗакрытьTestClientПослеЗапускаСценариев": true,
-    "ВыгружатьСтатусВыполненияСценариевВФайл": true,
-    "ПутьКФайлуДляВыгрузкиСтатуасВыполненияСценариев": "/home/coder/verny-drug/build/buildstatus.log",
     "ДелатьОтчетВФорматеАллюр": true,
     "КаталогOutputAllureБазовый": "/home/coder/verny-drug/build/allure-results",
     "ДелатьОтчетВФорматеjUnit": true,
