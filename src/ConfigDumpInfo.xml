@@ -92,7 +92,7 @@
 		<Metadata name="CommonPicture.МойПриют.Picture" id="3a1a71a0-5332-402c-a95d-6d412b834b4e.0" configVersion="ef25d6f33bf5f74f9070e5bbe7ed232c00000000"/>
 		<Metadata name="CommonPicture.Сервис" id="02112691-609d-443d-9365-b01f8f7a3eec" configVersion="5470dfcbc161f24794643a11da6ea8c400000000"/>
 		<Metadata name="CommonPicture.Сервис.Picture" id="02112691-609d-443d-9365-b01f8f7a3eec.0" configVersion="c8ba5981b3116e4cbc90d02f10cfc97a00000000"/>
-		<Metadata name="Configuration.ВерныйДруг" id="b990ee2d-116a-431b-ba95-122df2a90615" configVersion="71df9de72cb7b448a117dcd51f3e153000000000"/>
+		<Metadata name="Configuration.ВерныйДруг" id="b990ee2d-116a-431b-ba95-122df2a90615" configVersion="88733959a38b7946a0baf99d8a776c4300000000"/>
 		<Metadata name="Configuration.ВерныйДруг.ClientApplicationInterface" id="7fbac918-89fe-466d-b23f-2d264d7f22e7.b" configVersion="90df467cc01b42499365cd8b4044986700000000"/>
 		<Metadata name="Configuration.ВерныйДруг.CommandInterface" id="7fbac918-89fe-466d-b23f-2d264d7f22e7.a" configVersion="f0b7a7f5b03473458c95701d918801eb00000000"/>
 		<Metadata name="Configuration.ВерныйДруг.HomePageWorkArea" id="7fbac918-89fe-466d-b23f-2d264d7f22e7.8" configVersion="dc749f48f4d1084fbc57ee65386a41aa00000000"/>
@@ -185,6 +185,11 @@
 			<Metadata name="Enum.ЦветЖивотного.EnumValue.Белый" id="c14f8c52-4403-4cd4-9ae1-3fccb38167b6"/>
 			<Metadata name="Enum.ЦветЖивотного.EnumValue.Черный" id="e7e20c95-67c6-4d87-a1fb-28de9c4fa5c8"/>
 		</Metadata>
+		<Metadata name="HTTPService.ShelterAPI" id="8b1a45f9-42f5-454c-8aef-470b1b6eef92" configVersion="157e513a1218dc4a97a349912863e75e00000000">
+			<Metadata name="HTTPService.ShelterAPI.URLTemplate.Питомец" id="108c9316-380e-4ab6-8b18-7ffd0ac3b8e5"/>
+			<Metadata name="HTTPService.ShelterAPI.URLTemplate.Питомец.Method.GET" id="b37576d3-5028-4c1f-9fc0-a154a131d972"/>
+		</Metadata>
+		<Metadata name="HTTPService.ShelterAPI.Module" id="8b1a45f9-42f5-454c-8aef-470b1b6eef92.0" configVersion="6592edcd23dc6d469802a42f0f1d5bf800000000"/>
 		<Metadata name="InformationRegister.ЖурналКормлений" id="e3a3fcb8-d063-4c14-a22b-1e3a7536eefc" configVersion="1e752cea9b5be24ca0a19b25b0a4d63600000000">
 			<Metadata name="InformationRegister.ЖурналКормлений.Attribute.Ответственный" id="23872f4b-3c10-441c-a50a-851f78c019f7"/>
 			<Metadata name="InformationRegister.ЖурналКормлений.Dimension.Номенклатура" id="477fda0e-a17b-47bf-8285-747bf6e746d9"/>
