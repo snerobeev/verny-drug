@@ -1,5 +1,6 @@
 package ru.vernydrug;
 
+import io.qameta.allure.restassured.AllureRestAssured;
 import io.restassured.RestAssured;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.http.ContentType;
@@ -20,6 +21,7 @@ abstract class BaseApiTest {
         spec = new RequestSpecBuilder()
                 .setBaseUri(baseUrl)
                 .setAccept(ContentType.JSON)
+                .addFilter(new AllureRestAssured())
                 .build();
         RestAssured.enableLoggingOfRequestAndResponseIfValidationFails();
     }
