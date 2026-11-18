@@ -1,5 +1,6 @@
 plugins {
     id("java")
+    id("io.qameta.allure") version "4.3.0"
 }
 
 group = "ru.vernydrug"
@@ -20,6 +21,7 @@ dependencies {
     testImplementation("org.junit.jupiter:junit-jupiter")
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
     testImplementation("io.rest-assured:rest-assured:5.5.6")
+    testImplementation("io.qameta.allure:allure-rest-assured:2.35.5")
 }
 
 tasks.test {
