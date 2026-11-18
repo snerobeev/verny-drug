@@ -26,6 +26,7 @@ dependencies {
 
 tasks.test {
     useJUnitPlatform()
+    outputs.upToDateWhen { false }
     systemProperty(
         "baseUrl",
         System.getProperty("baseUrl") ?: "http://localhost:80/shelter-test/hs/shelter"
