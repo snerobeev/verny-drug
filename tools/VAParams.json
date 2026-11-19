@@ -1,14 +1,14 @@
 {
-    "featurepath": "/home/coder/verny-drug/features",
+    "featurepath": "{{ROOT}}/features",
     "ВыполнитьСценарии": true,
     "ЗавершитьРаботуСистемы": true,
     "ЗакрытьTestClientПослеЗапускаСценариев": true,
     "ДелатьОтчетВФорматеАллюр": true,
-    "КаталогOutputAllureБазовый": "/home/coder/verny-drug/build/allure-results",
+    "КаталогOutputAllureБазовый": "{{ROOT}}/build/allure-results",
     "ДелатьОтчетВФорматеjUnit": true,
-    "КаталогOutputjUnit": "/home/coder/verny-drug/build/junit",
+    "КаталогOutputjUnit": "{{ROOT}}/build/junit",
     "ДелатьЛогВыполненияСценариевВТекстовыйФайл": true,
-    "ИмяФайлаЛогВыполненияСценариев": "/home/coder/verny-drug/build/vanessa.log",
+    "ИмяФайлаЛогВыполненияСценариев": "{{ROOT}}/build/vanessa.log",
     "ДанныеКлиентовТестирования": [
         {
             "Имя": "Этот клиент",

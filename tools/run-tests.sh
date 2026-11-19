@@ -4,17 +4,23 @@
 set -u
 cd "$(dirname "$0")/.."
 
+# OneScript и vrunner: Jenkins запускает bash и не знает путей из fish.
+export PATH="$HOME/tools/onescript/bin:$PATH"
+
 IB="${IB:-/F/srv/1c/bases/shelter-test}"
 VANESSA_EPF="${VANESSA_EPF:-$HOME/tools/vanessa/vanessa-automation-single.epf}"
 
 rm -rf build
 mkdir -p build
 
+# Шаблон настроек: {{ROOT}} -> текущая папка репозитория.
+sed "s|{{ROOT}}|$PWD|g" tools/VAParams.json > build/VAParams.json
+
 vrunner test vanessa \
     --ibconnection "$IB" \
     --v8version 8.5.1.1150 \
     --bddrunner-path "$VANESSA_EPF" \
-    --vanessasettings tools/VAParams.json \
+    --vanessasettings build/VAParams.json \
     --language ru
 rc=$?
 if [ $rc -ne 0 ]; then

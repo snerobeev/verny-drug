@@ -22,13 +22,26 @@ pipeline {
                 sh 'tools/run-api-tests.sh'
             }
         }
+        stage('Сценарии Vanessa') {
+            steps {
+                sh 'xvfb-run -a tools/run-tests.sh'
+            }
+        }
     }
 
     post {
         always {
-            junit 'api-tests/build/test-results/test/*.xml'
+            junit 'api-tests/build/test-results/test/*.xml, build/junit/*.xml'
+            sh '''
+                rm -rf allure-results
+                mkdir -p allure-results
+                cp -r api-tests/build/allure-results/. allure-results/ 2>/dev/null || true
+                cp -r build/allure-results/. allure-results/ 2>/dev/null || true
+                rm -rf allure-results/history
+            '''
             allure includeProperties: false,
-                   results: [[path: 'api-tests/build/allure-results']]
+                   results: [[path: 'allure-results']]
         }
     }
 }
+
