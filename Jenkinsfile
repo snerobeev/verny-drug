@@ -14,4 +14,10 @@ pipeline {
             }
         }
     }
-}
+
+    post {
+        always {
+            junit 'api-tests/build/test-results/test/*.xml'
+        }
+    }
+} 
