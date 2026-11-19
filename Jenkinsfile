@@ -12,6 +12,11 @@ pipeline {
     }
 
     stages {
+        stage('Сборка тестовой базы') {
+            steps {
+                sh 'tools/build-test-base.sh'
+            }
+        }
         stage('Тесты API') {
             steps {
                 sh 'tools/run-api-tests.sh'
