@@ -22,13 +22,19 @@ pipeline {
                 sh 'tools/run-api-tests.sh'
             }
         }
+        stage('Сценарии Vanessa') {
+            steps {
+                sh 'xvfb-run -a tools/run-tests.sh'
+            }
+        }
     }
 
     post {
         always {
-            junit 'api-tests/build/test-results/test/*.xml'
+            junit 'api-tests/build/test-results/test/*.xml, build/junit/*.xml'
             allure includeProperties: false,
-                   results: [[path: 'api-tests/build/allure-results']]
+                   results: [[path: 'api-tests/build/allure-results'],
+                             [path: 'build/allure-results']]
         }
     }
 }
