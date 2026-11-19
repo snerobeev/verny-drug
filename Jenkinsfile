@@ -18,6 +18,9 @@ pipeline {
     post {
         always {
             junit 'api-tests/build/test-results/test/*.xml'
+            allure includeProperties: false,
+                   results: [[path: 'api-tests/build/allure-results']]
         }
     }
 } 
+
