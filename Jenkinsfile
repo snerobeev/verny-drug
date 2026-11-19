@@ -7,6 +7,10 @@ pipeline {
         buildDiscarder(logRotator(numToKeepStr: '20'))
     }
 
+    triggers {
+        pollSCM('H/5 * * * *')
+    }
+
     stages {
         stage('Тесты API') {
             steps {
@@ -22,5 +26,4 @@ pipeline {
                    results: [[path: 'api-tests/build/allure-results']]
         }
     }
-} 
-
+}
