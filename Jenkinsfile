@@ -14,6 +14,7 @@ pipeline {
     stages {
         stage('Сборка тестовой базы') {
             steps {
+                sh 'rm -rf api-tests/build/test-results api-tests/build/allure-results build/junit build/allure-results'
                 sh 'tools/build-test-base.sh'
             }
         }
