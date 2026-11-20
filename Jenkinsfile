@@ -17,6 +17,11 @@ pipeline {
                 sh 'tools/build-test-base.sh'
             }
         }
+        stage('Проверка конфигурации') {
+            steps {
+                sh 'xvfb-run -a tools/check-config.sh'
+            }
+        }
         stage('Тесты API') {
             steps {
                 sh 'tools/run-api-tests.sh'
@@ -56,7 +61,8 @@ pipeline {
 
     post {
         always {
-            junit 'api-tests/build/test-results/test/*.xml, build/junit/*.xml'
+            junit allowEmptyResults: true,
+                  testResults: 'api-tests/build/test-results/test/*.xml, build/junit/*.xml'
             sh '''
                 rm -rf allure-results
                 mkdir -p allure-results
