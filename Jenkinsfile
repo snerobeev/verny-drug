@@ -27,6 +27,21 @@ pipeline {
                 sh 'xvfb-run -a tools/run-tests.sh'
             }
         }
+        stage('Обновление рабочей базы') {
+            when {
+                expression { env.GIT_BRANCH == 'origin/main' }
+            }
+            options {
+                timeout(time: 1, unit: 'HOURS')
+            }
+            input {
+                message 'Все тесты прошли. Обновить рабочую базу shelter-prod?'
+                ok 'Обновить'
+            }
+            steps {
+                sh 'tools/deploy-prod.sh'
+            }
+        }
     }
 
     post {
