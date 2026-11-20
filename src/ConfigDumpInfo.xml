@@ -99,8 +99,8 @@
 		<Metadata name="Configuration.ВерныйДруг.MainSectionCommandInterface" id="7fbac918-89fe-466d-b23f-2d264d7f22e7.9" configVersion="2bb21207caf6574e83488b78c3697e6900000000"/>
 		<Metadata name="Configuration.ВерныйДруг.Splash" id="7fbac918-89fe-466d-b23f-2d264d7f22e7.2" configVersion="d49f48a340cf384da663f09c1dcf77d400000000"/>
 		<Metadata name="DataProcessor.МетаДанные" id="04749947-9dea-4ff4-bd28-e7985db93ac2" configVersion="aafaabeee2fbc14687574ab3f42a8af200000000"/>
-		<Metadata name="DataProcessor.МетаДанные.Form.Форма" id="c9b038c5-7f9f-49bd-a81f-3802e857fe20" configVersion="bb39424836c16b4087c15d94e39d462800000000"/>
-		<Metadata name="DataProcessor.МетаДанные.Form.Форма.Form" id="c9b038c5-7f9f-49bd-a81f-3802e857fe20.0" configVersion="201d11f17984064ca92924130a22ea0800000000"/>
+		<Metadata name="DataProcessor.МетаДанные.Form.Форма" id="c9b038c5-7f9f-49bd-a81f-3802e857fe20" configVersion="a89f1c6977f08e42a34b5b569aa3186a00000000"/>
+		<Metadata name="DataProcessor.МетаДанные.Form.Форма.Form" id="c9b038c5-7f9f-49bd-a81f-3802e857fe20.0" configVersion="74f3fde567994c42ad82da674e05247000000000"/>
 		<Metadata name="Document.ПриходнаяНакладная" id="9e1e57b9-669b-4285-bc85-11f63b11189a" configVersion="e46a51c7704f9e458d62526c9d5cf17500000000">
 			<Metadata name="Document.ПриходнаяНакладная.Attribute.Склад" id="150f30b1-f36b-4dd1-b523-cb73273a94d0"/>
 			<Metadata name="Document.ПриходнаяНакладная.TabularSection.СписокНоменклатуры.Attribute.Количество" id="5740239e-31a4-447f-9e4d-7c76511fba1b"/>
