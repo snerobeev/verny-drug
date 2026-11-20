@@ -39,7 +39,17 @@ pipeline {
                 ok 'Обновить'
             }
             steps {
-                sh 'tools/deploy-prod.sh'
+                script {
+                    def rc = sh(script: 'tools/deploy-prod.sh', returnStatus: true)
+                    if (rc == 102) {
+                        def changes = readFile('build/restructure.txt').trim()
+                        input message: "Обновление требует реструктуризации таблиц с данными:\n${changes}\n\nКопия prod уже сделана. Применить?",
+                              ok: 'Применить'
+                        sh 'FORCE_APPLY=1 tools/deploy-prod.sh'
+                    } else if (rc != 0) {
+                        error "deploy-prod.sh завершился с кодом ${rc}"
+                    }
+                }
             }
         }
     }
