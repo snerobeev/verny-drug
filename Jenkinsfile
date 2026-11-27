@@ -14,13 +14,18 @@ pipeline {
     stages {
         stage('Сборка тестовой базы') {
             steps {
-                sh 'rm -rf api-tests/build/test-results api-tests/build/allure-results build/junit build/allure-results'
+                sh 'rm -rf api-tests/build/test-results api-tests/build/allure-results build/junit build/allure-results build-unit'
                 sh 'tools/build-test-base.sh'
             }
         }
         stage('Проверка конфигурации') {
             steps {
                 sh 'xvfb-run -a tools/check-config.sh'
+            }
+        }
+        stage('Модульные тесты YAxUnit') {
+            steps {
+                sh 'xvfb-run -a tools/run-unit-tests.sh'
             }
         }
         stage('Тесты API') {
@@ -69,6 +74,7 @@ pipeline {
                 mkdir -p allure-results
                 cp -r api-tests/build/allure-results/. allure-results/ 2>/dev/null || true
                 cp -r build/allure-results/. allure-results/ 2>/dev/null || true
+                cp -r build-unit/allure-results/. allure-results/ 2>/dev/null || true
                 rm -rf allure-results/history
             '''
             allure includeProperties: false,
