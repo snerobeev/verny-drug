@@ -27,12 +27,13 @@ rm -rf "$OUT"
 mkdir -p "$OUT/allure-results"
 
 echo "== Загрузка YAxUnit"
-"$IBCMD" config load --db-path="$IB_PATH" --extension=YAxUnit "$YAXUNIT_CFE"
+"$IBCMD" config load --db-path="$IB_PATH" --extension=YAXUNIT "$YAXUNIT_CFE"
 
 echo "== Загрузка расширения с тестами из exts/tests"
 "$IBCMD" config import --db-path="$IB_PATH" --extension=ВерныйДруг_Тесты exts/tests
 
-for EXT in YAxUnit ВерныйДруг_Тесты; do
+# Имя YAXUNIT задано внутри yaxunit.cfe (ibcmd extension list)
+for EXT in YAXUNIT ВерныйДруг_Тесты; do
   echo "== $EXT: применение к базе данных"
   "$IBCMD" config apply --db-path="$IB_PATH" --extension="$EXT" --force
 
