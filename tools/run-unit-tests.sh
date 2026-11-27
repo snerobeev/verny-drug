@@ -33,13 +33,13 @@ echo "== Загрузка расширения с тестами из exts/tests
 "$IBCMD" config import --db-path="$IB_PATH" --extension=ВерныйДруг_Тесты exts/tests
 
 for EXT in YAxUnit ВерныйДруг_Тесты; do
+  echo "== $EXT: применение к базе данных"
+  "$IBCMD" config apply --db-path="$IB_PATH" --extension="$EXT" --force
+
   echo "== $EXT: отключаем безопасный режим и защиту от опасных действий"
   "$IBCMD" extension update --db-path="$IB_PATH" --name="$EXT" \
       --safe-mode=no --unsafe-action-protection=no
 done
-
-echo "== Применение изменений"
-"$IBCMD" config apply --db-path="$IB_PATH" --force
 
 # Настройки прогона YAxUnit
 cat > "$OUT/yaxunit.json" <<JSON
