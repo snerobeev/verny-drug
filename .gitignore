@@ -14,6 +14,7 @@
 
 # Результаты тестов и сборки
 build/
+build-unit/
 out/
 allure-results/
 allure-report/
